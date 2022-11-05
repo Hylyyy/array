@@ -1,0 +1,64 @@
+print("\t****  PROGRAMMED BY  ****")
+print("***** HYDEE LYN C. PALISOC *****\n")
+
+array_list = [10, 25, 70, 45, 105, 65, 90, 85, 30, 50]
+
+
+def menu():
+    print("\n\t\t~~~~~~MENU~~~~~~\n")
+    print("\t1. Add an element")
+    print("\t2. Insert an element")
+    print("\t3. Modify an element")
+    print("\t4. Delete an element")
+    print("\t5. Arrange in ascending order")
+    print("\t6. Arrange in descending order")
+    print("\t7. Exit")
+    print("\t\t~~~~~~~~~~~~~~~~\n")
+
+
+menu()
+option = input("What do you want to do?: ")
+while option != 8:
+    if option == "1":
+        add = int(input("Add an element: "))
+        array_list.append(add)
+        print("The element has been added\n")
+        print("Updated Array: \n", array_list)
+
+    if option == "2":
+        insert_ind = int(input("Enter an index(Where to put): "))
+        insert = int(input("Insert an element: "))
+        array_list.insert(insert_ind, insert)
+        print("The element has been inserted\n")
+        print("Updated Array: \n", array_list)
+
+    if option == "3":
+        index = int(input("The element index to change: "))
+        modify = int(input("Element that you wanted to put: "))
+        array_list[index] = modify
+        print("The element is now modified\n")
+        print("Updated Array: \n", array_list)
+
+    if option == "4":
+        remove = int(input("Delete an element: "))
+        array_list.remove(remove)
+        print("The element has been removed\n")
+        print("Updated Array: \n", array_list)
+
+    if option == "5":
+        array_list.sort()
+        print("The element is now in ascending order\n")
+        print("Updated Array: \n", array_list)
+
+    if option == "6":
+        array_list.sort()
+        array_list.reverse()
+        print("The element is now in descending order\n")
+        print("Updated Array: \n", array_list)
+
+    if option == "7":
+        print("\n\t\t~~Thank you for using!!!~~")
+        break
+
+    menu()
+    option = input("What do you want to do?: ")
